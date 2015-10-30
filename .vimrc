@@ -8,7 +8,7 @@ syntax on " enable syntax coloring
 set expandtab " insert spaces when tab is pressed
 set ts=2 " a tab is worth 2 spaces
 set shiftwidth=2 " each time we indent code we do it with 2 spaces
-
+set noswapfile " do not use swap files as everything I code is under git
 
 " disable arrow keys in insert mode
 imap <up> <nop>
