@@ -1,3 +1,5 @@
+#
+#
 # Path to your oh-my-zsh installation.
 export ZSH=/home/fran/.oh-my-zsh
 
@@ -86,7 +88,14 @@ source $ZSH/oh-my-zsh.sh
 NPM_PACKAGES="/home/fran/.npm-packages"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH="$NPM_PACKAGES/bin:/opt/android-studio/bin:/home/fran/Android/Sdk/platform-tools/:$PATH"
+alias t="task"
+alias tpfbk="task project:FBK"
+alias tpqrt="task project:QRT"
+alias tpfrt="task project:FRT"
+alias tpbuild="task project:BUILD"
+alias tpstaging="task project:STAGING"
 # Unset manpath so we can inherit from /etc/manpath via the `manpath`
 # command
 unset MANPATH  # delete if you already modified MANPATH elsewhere in your config
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+source /home/fran/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
