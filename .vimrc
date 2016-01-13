@@ -10,6 +10,11 @@ set ts=2 " a tab is worth 2 spaces
 set shiftwidth=2 " each time we indent code we do it with 2 spaces
 set noswapfile " do not use swap files as everything I code is under git
 set clipboard=unnamedplus " copying data to clipboard
+set hlsearch " highlight matching search terms
+set scrolloff=10 " show 10 lines when moving cursor around
+set showcmd " shows the current command
+set cursorline " show a marker at 80 chars
+set colorcolumn=80 " show a marker at 80 chars
 
 " disable arrow keys in insert mode
 imap <up> <nop>
@@ -42,14 +47,24 @@ Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'mhinz/vim-signify'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'rking/ag.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" The Silver Searcher (ag.vim)
+nnoremap \ :Ag<SPACE>
+"
+" Remove trailing spaces on save [ntpeters/vim-better-whitespace]
+autocmd BufWritePre * StripWhitespace
+autocmd BufWritePre * CurrentLineWhitespaceOn
+
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -63,11 +78,12 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 let s:grep_available = 0
-let g:solarized_termcolors=1
 let mapleader=","
 set background=dark
-colorscheme solarized
+" set background=light
+let g:solarized_bold = 0 " disable bold font (actually laughs at this)
 
+colorscheme solarized
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
