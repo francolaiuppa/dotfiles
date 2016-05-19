@@ -10,5 +10,6 @@
 # bits.
 #
 # By default this script does nothing.
-powertop --auto-tune
+redshift -o 3500K -l 14.2744:38.7751
+
 exit 0
