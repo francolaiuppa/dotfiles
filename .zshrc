@@ -1,5 +1,7 @@
-#
-#
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export EDITOR=vim
 # Path to your oh-my-zsh installation.
 export ZSH=/home/fran/.oh-my-zsh
 export TERM=screen-256color
@@ -52,11 +54,11 @@ ZSH_THEME="intheloop"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker scd battery)
+plugins=(git docker zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+export PATH="/home/fran/.npm-packages/bin:/opt/android-studio/bin:/home/fran/Android/Sdk/platform-tools/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/fran/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -86,17 +88,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-NPM_PACKAGES="/home/fran/.npm-packages"
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-PATH="$NPM_PACKAGES/bin:/opt/android-studio/bin:/home/fran/Android/Sdk/platform-tools/:$PATH"
-alias t="task"
-alias tpfbk="task project:FBK"
-alias tpqrt="task project:QRT"
-alias tpfrt="task project:FRT"
-alias tpbuild="task project:BUILD"
-alias tpstaging="task project:STAGING"
-# Unset manpath so we can inherit from /etc/manpath via the `manpath`
-# command
-unset MANPATH  # delete if you already modified MANPATH elsewhere in your config
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-source /home/fran/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Set language layout hotkey ctrl+spaceb
+#
+setxkbmap -option 'grp:switch,grp:alt_space_toggle,grp_led:scroll' 'us,es'
