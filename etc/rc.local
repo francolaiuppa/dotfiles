@@ -11,5 +11,6 @@
 #
 # By default this script does nothing.
 redshift -o 3500K -l 14.2744:38.7751
+powertop --auto-tune
 
 exit 0
