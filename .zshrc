@@ -87,7 +87,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias spotify="spotify --force-device-scale-factor=2"
 
 # Set language layout hotkey ctrl+spaceb
 #
 setxkbmap -option 'grp:switch,grp:alt_space_toggle,grp_led:scroll' 'us,es'
+# Configure touchpad
+source ~/synaptic.sh
