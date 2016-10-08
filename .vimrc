@@ -91,6 +91,7 @@ let g:airline#extensions#tabline#enabled = 1
 " " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:syntastic_enable_signs=1
+let g:statline_syntastic = 0
 
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -99,3 +100,33 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_javascript_checkers=['jscs']
+
+" extra aliases
+let mapleader=","
+
+" NERDTree Aliases
+let g:NERDTreeQuitOnOpen=1 " close NERDTree after a file is opened
+let NERDTreeShowHidden=1 " show hidden files in NERDTree
+let NERDTreeIgnore = ['\.js.map$'] " remove some files by extension
+" Toggle NERDTree
+nmap <silent> <leader>k :NERDTreeToggle<cr>
+" " expand to the path of the file in the current buffer
+nmap <silent> <leader>y :NERDTreeFind<cr>
+" " close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"""""""" The Silver Searcher (ag.vim)
+nnoremap \ :Ag!<SPACE>
+" // in visual mode will search for the selected text
+vnoremap // y/<C-R>"<CR>
+"""""""" ntpeters/vim-better-whitespace
+" Remove trailing spaces on save
+autocmd BufWritePre * StripWhitespace
+autocmd BufWritePre * CurrentLineWhitespaceOn
+"""""""" kien/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
