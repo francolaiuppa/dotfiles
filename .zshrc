@@ -1,3 +1,4 @@
+export EDITOR=vim
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
@@ -10,7 +11,7 @@ export TERM=screen-256color
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="intheloop"
+ZSH_THEME="francola"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -62,6 +63,8 @@ export PATH="/home/fran/.npm-packages/bin:/opt/android-studio/bin:/home/fran/And
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+# No beep
+setopt NO_BEEP
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
