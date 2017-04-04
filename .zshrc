@@ -1,17 +1,13 @@
-export EDITOR=vim
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-export EDITOR=vim
-# Path to your oh-my-zsh installation.
-export ZSH=/home/fran/.oh-my-zsh
-export TERM=screen-256color
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="francola"
+# Path to your oh-my-zsh installation.
+  export ZSH=/home/fran/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -57,14 +53,11 @@ ZSH_THEME="francola"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git docker zsh-syntax-highlighting)
 
+source $ZSH/oh-my-zsh.sh
+
 # User configuration
 
-export PATH="/home/fran/.npm-packages/bin:/opt/android-studio/bin:/home/fran/Android/Sdk/platform-tools/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/fran/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
-# No beep
-setopt NO_BEEP
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -80,7 +73,7 @@ setopt NO_BEEP
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -90,10 +83,4 @@ setopt NO_BEEP
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias spotify="spotify --force-device-scale-factor=2"
-
-# Set language layout hotkey ctrl+spaceb
-#
-setxkbmap -option 'grp:switch,grp:alt_space_toggle,grp_led:scroll' 'us,es'
-# Configure touchpad
-source ~/synaptic.sh
+alias t='task'
