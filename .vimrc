@@ -1,37 +1,8 @@
 set nocompatible " Use vim configs rather than vi configs. Required. Must be the first line
-set backspace=2 " make backspace work like most other apps
-set number " show line numbers
-set laststatus=2 " always show status bar
-set cursorline " highlights current line
-filetype off                  " required
-syntax on " enable syntax coloring
-set expandtab " insert spaces when tab is pressed
-set ts=2 " a tab is worth 2 spaces
-set shiftwidth=2 " each time we indent code we do it with 2 spaces
-set noswapfile " do not use swap files as everything I code is under git
-set clipboard=unnamedplus " copying data to clipboard
-set hlsearch " highlight matching search terms
-set scrolloff=10 " show 10 lines when moving cursor around
-set showcmd " shows the current command
-set cursorline " show a marker at 80 chars
-set colorcolumn=80 " show a marker at 80 chars
-
-" disable arrow keys in insert mode
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-" same but for normal mode
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-
-" toggle :set paste / :set nopaste
-set pastetoggle=<F10>
-
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+filetype off                  " required
+
+set rtp+=/home/fran/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -48,14 +19,50 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'mhinz/vim-signify'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
+Plugin 'othree/yajs.vim'
+" Plugin 'jelera/vim-javascript-syntax'
+" Plugin 'pangloss/vim-javascript'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'rking/ag.vim'
+Plugin 'wakatime/vim-wakatime'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'wavded/vim-stylus'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+set backspace=2 " make backspace work like most other apps
+set number " show line numbers
+set laststatus=2 " always show status bar
+set cursorline " highlights current line
+syntax on " enable syntax coloring
+set expandtab " insert spaces when tab is pressed
+set ts=2 " a tab is worth 2 spaces
+set shiftwidth=2 " each time we indent code we do it with 2 spaces
+set noswapfile " do not use swap files as everything I code is under git
+set clipboard=unnamedplus " copying data to clipboard
+set hlsearch " highlight matching search terms
+set scrolloff=10 " show 10 lines when moving cursor around
+set showcmd " shows the current command
+set cursorline " show a marker at 80 chars
+set colorcolumn=80 " show a marker at 80 chars
+set encoding=utf-8
+
+" disable arrow keys in insert mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+" same but for normal mode
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+" toggle :set paste / :set nopaste
+set pastetoggle=<F10>
 
 " The Silver Searcher (ag.vim)
 nnoremap \ :Ag<SPACE>
@@ -130,3 +137,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
+
+"" Tidy HTML
+:vmap ,x :!tidy -q -i --show-errors 0<CR>
+
