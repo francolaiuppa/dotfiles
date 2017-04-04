@@ -258,6 +258,13 @@
     </action>
   </keybind>
 
+  <!-- Keybindings for finding files -->
+  <keybind key="W-f">
+    <action name="Execute">
+      <command>pcmanfm --find-files</command>
+    </action>
+  </keybind>
+
   <!--keybindings for LXPanel -->
   <keybind key="W-r">
       <action name="Execute">
@@ -303,62 +310,6 @@
   <keybind key="XF86Display">
       <action name="Execute"><command>lxrandr</command></action>
   </keybind>
-  <!-- MULTIMEDIA KEYS -->
-  <keybind key="XF86AudioMute">
-    <action name="Execute">
-      <command>amixer set Master toggle</command>
-    </action>
-  </keybind>
-  <keybind key="XF86AudioRaiseVolume">
-    <action name="Execute">
-    <command>amixer set Master 5%+ unmute</command>
-    </action>
-  </keybind>
-  <keybind key="XF86AudioLowerVolume">
-    <action name="Execute">
-    <command>amixer set Master 5%- unmute</command>
-    </action>
-  </keybind>
-  <keybind key="XF86MonBrightnessDown">
-    <action name="Execute">
-    <command>xbacklight -5</command>
-    <startupnotify>
-      <enabled>yes</enabled>
-      <name>Decrease screen brightness</name>
-    </startupnotify>
-  </action>
-  </keybind>
-  <keybind key="XF86MonBrightnessUp">
-    <action name="Execute">
-    <command>xbacklight +5</command>
-    <startupnotify>
-    <enabled>yes</enabled>
-    <name>Increase screen brightness</name>
-  </startupnotify>
-  </action>
-  </keybind>
-
-<!-- Spotify -->
- <keybind key="XF86AudioPlay">
-   <action name="Execute">
-     <command>dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause</command>
-   </action>
- </keybind>
- <keybind key="XF86AudioPrev">
-   <action name="Execute">
-     <command>dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous</command>
-   </action>
- </keybind>
- <keybind key="XF86AudioNext">
-   <action name="Execute">
-     <command>dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next</command>
-   </action>
- </keybind>
- <keybind key="XF86AudioStop">
-   <action name="Execute">
-     <command>dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop</command>
-   </action>
- </keybind>
 
 </keyboard>
 
