@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="style" mtime="1481483061" type="string">
+		<stringvalue>Hack 14</stringvalue>
+	</entry>
+	<entry name="palette_name" mtime="1493973363" type="string">
+		<stringvalue>Tomorrow Night Eighties</stringvalue>
+	</entry>
+	<entry name="palette" mtime="1493973363" type="string">
+		<stringvalue>#000000000000:#F2F277777979:#9999CCCC9999:#FFFFCCCC6666:#66669999CCCC:#CCCC9999CCCC:#6666CCCCCCCC:#FFFFFEFEFEFE:#000000000000:#F1F177777979:#9999CCCC9999:#FFFFCCCC6666:#66669999CCCC:#CCCC9999CCCC:#6666CCCCCCCC:#FFFFFEFEFEFE:#CCCCCCCCCCCC:#2C2C2C2C2C2C</stringvalue>
+	</entry>
+	<entry name="allow_bold" mtime="1493973363" type="bool" value="true"/>
+</gconf>
